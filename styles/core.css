@@ -1,0 +1,31 @@
+:root {
+  --color-primary: #039be5;
+  --color-primary-light: #1ab0f9;
+  --color-rolling-stone: #808080;
+  --color-valid-green: #7ed900;
+  --color-error-red: #ff3366;
+  --color-black: #17202c;
+  --color-white: #fff;
+
+
+  --border-radius: 5px;
+  --border: 1px solid var(--color-rolling-stone);
+
+
+  --base-spacing-unit: 20px;
+  --bsu: var(--base-spacing-unit);
+
+  --card-box-shadow: 0 1px 5px 0 var(--color-black),
+                  0 2px 2px 0 var(--color-black),
+                  0 3px 1px -2px var(--color-black);
+
+  --font-size-x-large: 22px;
+  --font-size-large: 16px;
+  --font-size-mid: 14px;
+  --font-size-small: 12px;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}
