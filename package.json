@@ -1,0 +1,33 @@
+{
+  "name": "extension-styleguide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "prettier:dev": "onchange 'dist/styles/**/*.css' -- prettier --write {{changed}}",
+    "css:dev": "npx postcss styles/**/*.css --base styles --watch -c postcss.config.js --no-map --dir dist/styles",
+    "stylemark:dev": "stylemark -i 'docs' -o 'dist' -c 'stylemark.yml' -b 8080",
+    "start": "concurrently --kill-others \"npm run stylemark:dev\" \"npm run css:dev\" \"npm run prettier:dev\"",
+    "prettier": "npx prettier --write 'dist/styles/**/*.css'",
+    "css": "npx postcss styles/**/*.css --base styles -c postcss.config.js --no-map --dir dist/styles",
+    "stylemark": "stylemark -i 'docs' -o 'dist' -c 'stylemark.yml'",
+    "build": "npm run stylemark && npm run css && npm run prettier"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.0.0",
+    "onchange": "^6.1.0",
+    "perfectionist": "^2.4.0",
+    "postcss": "^7.0.21",
+    "postcss-cli": "^6.1.3",
+    "postcss-custom-properties": "^9.0.2",
+    "postcss-import": "^12.0.1",
+    "prettier": "^1.18.2",
+    "stylemark": "^3.1.3"
+  }
+}

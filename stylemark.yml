@@ -1,0 +1,16 @@
+name: Extensions Styleguide
+
+excludeDir:
+  - 'dist/'
+
+assets:
+  - 'docs/'
+
+theme:
+    logo: 'assets/header.png'
+    sidebar:
+        background: '#161f29'
+        textColor: '#fff'
+
+order:
+  - +Varibles
