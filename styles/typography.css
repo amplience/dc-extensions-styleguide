@@ -5,7 +5,7 @@
   font-weight: var(--font-weight-normal);
 }
 
-.ampx-heading-large {
+.ampx-heading {
   font-size: var(--font-size-headline);
   font-weight: var(--font-weight-normal);
 }
@@ -15,12 +15,12 @@
   font-weight: var(--font-weight-medium);  
 }
 
-.ampx-subheading-normal {
+.ampx-subheading {
   font-size: var(--font-size-subheading);
   font-weight: var(--font-weight-normal);
 }
 
-.ampx-body {
+.ampx-body, .ampx-link {
   font-size: var(--font-size-normal);
 }
 
