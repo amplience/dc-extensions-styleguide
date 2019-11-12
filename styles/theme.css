@@ -1,0 +1,17 @@
+body, html {
+    font-family: 'Roboto', sans-serif;
+}
+.theme-sidebar-header-logo {
+  width: 100%;
+  height: auto !important;
+}
+
+.theme-sidebar-header-title {
+  display: block;
+  text-align: center;
+}
+
+.theme-content-element-source,
+.i-example__heading {
+  display: none;
+}
