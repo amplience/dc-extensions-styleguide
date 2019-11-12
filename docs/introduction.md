@@ -14,13 +14,10 @@ is and how to start building your own
 
 ### Useful links
 
-- [Documentation]()
-- [GitHub dc-extensions-sdk]()
-- [API Documentation]()
-- [GitHub dc-extensions-styleguide]()
+- [How to use Extensions in Dynamic Content](https://docs.amplience.net/development/extensions.html)
+- [SDK Documentation](https://amplience.github.io/dc-extensions-sdk/)
+- [SDK Github](https://github.com/amplience/dc-extensions-sdk)
 
-
-So you're building an extension
 
 ### Contents
 An overview of what we'll cover in this guide
