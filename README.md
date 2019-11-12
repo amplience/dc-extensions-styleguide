@@ -14,6 +14,8 @@
 
 ### Example documentaion
 
+Create a css file in /styles/ gulp will process format and allow for importing in .md with `/css/<name>.css`
+
 ```
     ---
     name: Layout
@@ -27,6 +29,6 @@
       I'm a section
     </section>
     ```
-    ```button:/styles/button.css
+    ```button:/css/button.css
     ```
 ```
