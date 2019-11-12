@@ -9,6 +9,7 @@
 }
 
 .ampx-input {
+  outline: none;
   border: 0;
   border-bottom: var(--border);
   height: 30px;
@@ -33,6 +34,7 @@
 }
 
 .ampx-input:focus {
+  outline: none;
   border-bottom: 2px solid var(--color-primary);
 }
 
