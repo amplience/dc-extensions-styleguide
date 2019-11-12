@@ -31,7 +31,7 @@
     color: var(--color-white);
 }
 
-.ampx-button[disabled] {
+.ampx-button__disabled {
     background-color: var(--color-grey-disabled);
     color: var(--color-grey-text-disabled);
 }
