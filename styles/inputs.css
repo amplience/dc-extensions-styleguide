@@ -20,12 +20,7 @@
   font-size: 14px;
   height: 30px;
   background: none;
-}
-
-textarea.ampx-input {
-  height: auto;
-  font-family: var(--font-family);
-  max-width: 100%;
+  width: 100%;
 }
 
 .ampx-input__label, .ampx-input__description {
@@ -41,14 +36,21 @@ textarea.ampx-input {
   border-bottom: 2px solid var(--color-primary);
 }
 
-.ampx-input__container[error] .ampx-input__description {
+.ampx-input__container--error .ampx-input__description {
   color: var(--color-error-red);
 }
 
-.ampx-input__container[error] .ampx-input {
+.ampx-input:invalid {
+  border-color: var(--color-error-red);
+  box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+.ampx-input__container--error .ampx-input {
   border-color: var(--color-error-red);
 }
 
-.ampx-input__container[disabled] {
+.ampx-input__container--disabled {
   opacity: 0.8;
+  pointer-events: none;
 }
