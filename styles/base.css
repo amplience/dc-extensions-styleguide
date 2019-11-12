@@ -1,6 +1,10 @@
+@import 'core.css';
 @import 'typography.css';
+@import 'button.css';
+@import 'inputs.css';
 
 body, html {
     font-family: 'Roboto', sans-serif;
+    color: var(--color-default-text);
 }
 

@@ -30,9 +30,9 @@ gulp.task('default', () => {
     log('Watching');
 
     browser.init({
-        server: {
-            baseDir: "./dist"
-        }
+      server: {
+        baseDir: './dist'
+      }
     });
 
     gulp.watch(
