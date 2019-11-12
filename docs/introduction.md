@@ -10,7 +10,7 @@ get your extension looking similar to our core form. This isn't a drop in css fi
 to try help you get up and running.
 
 Learning about extensions for the first time? here are some useful links to help you get up to speed with what an extension
-is and how to start building your own
+is and how to start building your own.
 
 ### Useful links
 
