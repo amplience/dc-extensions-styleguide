@@ -5,12 +5,22 @@ excludeDir:
 
 assets:
   - 'docs/'
+  - 'css/'
 
 theme:
     logo: 'assets/header.png'
+    css:
+      - https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&display=swap
+      - styles/theme.css
     sidebar:
         background: '#161f29'
         textColor: '#fff'
 
+examples:
+  css:
+    - 'https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&display=swap'
+    - styles/base.css
+
 order:
+  - +Introduction
   - +Varibles
