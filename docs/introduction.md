@@ -21,10 +21,10 @@ is and how to start building your own.
 
 ### Contents
 An overview of what we'll cover in this guide
-- [Varibles](/#category-varibles)
-  - [Colors](/#colors)
-  - [Typography](/#typography)
+- [Varibles](./#category-varibles)
+  - [Colors](./#colors)
+  - [Typography](./#typography)
 
-- [Components](/#category-components)
-  - [Buttons](/#buttons)
-  - [Inputs](/#inputs)
+- [Components](./#category-components)
+  - [Buttons](./#buttons)
+  - [Inputs](./#inputs)

@@ -9,7 +9,8 @@
   "scripts": {
     "start": "npx gulp",
     "build": "npx gulp build",
-    "serve": "npm run build && npx http-server ./dist"
+    "serve": "npm run build && npx http-server ./dist",
+    "deploy-docs": "npm run build && npx gulp docs"
   },
   "keywords": [],
   "author": "jwarner@amplience.com",
@@ -18,6 +19,7 @@
     "browser-sync": "^2.26.7",
     "fancy-log": "^1.3.3",
     "gulp": "^4.0.2",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-postcss": "^8.0.0",
     "gulp-prettier": "^2.2.0",
     "http-server": "^0.11.1",

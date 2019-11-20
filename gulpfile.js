@@ -4,6 +4,7 @@ const prettier = require('gulp-prettier');
 const postcss = require('gulp-postcss');
 const stylemark = require('stylemark');
 const browser = require('browser-sync').create();
+const ghPages = require('gulp-gh-pages');
 
 function generate() {
     log('Generating styleguide');
@@ -44,4 +45,9 @@ gulp.task('default', () => {
         log('Files changed');
         browser.reload();
     });
+});
+
+gulp.task('docs', function() {
+    return gulp.src('./dist/**/*')
+        .pipe(ghPages());
 });
