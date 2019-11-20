@@ -1,11 +1,11 @@
 ---
 name: Colors
-category: Varibles
+category: Variables
 ---
 
-Ampliences's Flagship CMS Dynamic Content follows a blue color scheme `#039be5` with bright green & pink for validation colours.
-Text/backgrounds and figures within the app follows a range of black and greys. The stripped back amount of colours used within the app
-are shown below. We have supplied some CSS varibles for you to grab and start usinging in your project.
+Ampliences's Flagship CMS Dynamic Content follows a blue color scheme `#039be5` with bright green & pink for validation colors.
+Text/backgrounds and figures within the app follows a range of black and greys. The stripped back amount of colors used within the app
+are shown below. We have supplied some CSS variables for you to grab and start usinging in your project.
 
 - `--color-primary`: should primarily be used for call to actions, and grabbing attention for an action.
 - `--color-primary-light`: is normally used to accent the primary color such as hover actions.

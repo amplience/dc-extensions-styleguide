@@ -21,7 +21,7 @@ is and how to start building your own.
 
 ### Contents
 An overview of what we'll cover in this guide
-- [Varibles](./#category-varibles)
+- [Variables](./#category-variables)
   - [Colors](./#colors)
   - [Typography](./#typography)
 

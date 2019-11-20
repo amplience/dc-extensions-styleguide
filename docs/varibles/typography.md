@@ -1,9 +1,9 @@
 ---
 name: Typography
-category: Varibles
+category: Variables
 ---
 
-Dynamic Content uses Roboto as it's font, you can include it in your project like so:
+Dynamic Content uses Roboto, you can include it in your project like so:
 ```typography
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&amp;display=swap">
 ```
