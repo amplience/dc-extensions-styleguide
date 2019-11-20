@@ -3,7 +3,7 @@ name: Colors
 category: Variables
 ---
 
-Ampliences's Flagship CMS Dynamic Content follows a blue color scheme `#039be5` with bright green & pink for validation colors.
+Dynamic Content follows a blue color scheme `#039be5` with bright green & pink for validation colors.
 Text/backgrounds and figures within the app follows a range of black and greys. The stripped back amount of colors used within the app
 are shown below. We have supplied some CSS variables for you to grab and start usinging in your project.
 
