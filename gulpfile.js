@@ -5,6 +5,7 @@ const postcss = require('gulp-postcss');
 const stylemark = require('stylemark');
 const browser = require('browser-sync').create();
 const ghPages = require('gulp-gh-pages');
+const fs = require('fs');
 
 function generate() {
     log('Generating styleguide');
@@ -48,6 +49,8 @@ gulp.task('default', () => {
 });
 
 gulp.task('docs', function() {
+    log('adding .nojekyll file');
+    fs.writeFileSync(__dirname + '/dist/.nojekyll', '');
     return gulp.src('./dist/**/*')
         .pipe(ghPages());
 });
