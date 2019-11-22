@@ -3,22 +3,22 @@ name: Typography
 category: Variables
 ---
 
-Dynamic Content uses Roboto, you can include it in your project like so:
+Dynamic Content uses Roboto and you can include it in your project as follows:
 ```typography
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&amp;display=swap">
 ```
 
-Text color for standard text should be `--color-default-black` / `#333333`.
+The text color for standard text should be `--color-default-black` / `#333333`.
 
-#### For usages in the form:
+#### Usage in the content editing form:
 
-- `.ampx-heading`: Should be used for the main header in an extension. 
-- `.ampx-subheading-large`: Should be used for the main heading in a sub list or section 
-- `.ampx-subheading`: Should be used for a heading in a sub list in a section 
-- `.ampx-body`: Should be used for copy. 
-- `.ampx-link`: Should be used for external links. 
-- `.ampx-label`: Should be used for adding contextual information to an entity. 
-- `.ampx-error`: Should be used for adding contextual information to an entity in an error state. 
+- `.ampx-heading`: the main header in an extension. 
+- `.ampx-subheading-large`: the main heading in a sub list or section 
+- `.ampx-subheading`: a heading in a sub list in a section 
+- `.ampx-body`: used for copy. 
+- `.ampx-link`: used for external links. 
+- `.ampx-label`: used for adding contextual information to an entity. 
+- `.ampx-error`: used for adding contextual information to an entity in an error state. 
 
 ```typography.html hidden
 <h2 class="ampx-heading">.ampx-heading Regular 24px</h2>
@@ -39,7 +39,7 @@ Text color for standard text should be `--color-default-black` / `#333333`.
 ```typography:/css/typography.css
 ```
 
-#### Here an example of usage:
+#### Usage examples:
 
 ```typography-examples.html hidden
 <h1 class="ampx-heading">Main Section</h1>

@@ -4,16 +4,15 @@ category: Variables
 ---
 
 Dynamic Content follows a blue color scheme `#039be5` with bright green & pink for validation colors.
-Text/backgrounds and figures within the app follows a range of black and greys. The stripped back amount of colors used within the app
-are shown below. We have supplied some CSS variables for you to grab and start usinging in your project.
+Text, backgrounds and figures within the app use a range of black and greys. Colors used within the app are shown below. We have included some CSS variables for you to use in your own projects.
 
-- `--color-primary`: should primarily be used for call to actions, and grabbing attention for an action.
-- `--color-primary-light`: is normally used to accent the primary color such as hover actions.
-- `--color-valid-green`: should be used to denote that an action has been successful or an item is valid.
-- `--color-error-red`: should be used mostly for when items have failed or if an item is invalid.
+- `--color-primary`: primarily be used for call to actions, and grabbing attention for an action.
+- `--color-primary-light`: normally used to accent the primary color in cases such as hover actions.
+- `--color-valid-green`: used to denote that an action has been successful or an item is valid.
+- `--color-error-red`: used mostly to indicate that items are invalid or that an action has failed
 
 
-### Usage is like so:
+### Usage is as follows:
 ```
 :root {
   --color-primary: #039be5;

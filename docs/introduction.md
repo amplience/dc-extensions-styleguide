@@ -1,16 +1,15 @@
 ---
-name: Getting started
+name: Dynamic Content Extensions Style Guide
 category: Introduction
 ---
 
 ![GitHub followers](https://img.shields.io/github/followers/amplience?style=social)
-##### Documentation and examples for Amplience's Dynamic Content extensions, on how to style to match our application
-Want to style your extension to match Amplience's form style? Great! we have put together this guide to help you quickly
-get your extension looking similar to our core form. This isn't a drop in css file but we do provide some minor guidelines
-to try help you get up and running.
 
-Learning about extensions for the first time? here are some useful links to help you get up to speed with what an extension
-is and how to start building your own.
+When you develop an extension for Dynamic Content, it's important to ensure that your extension matches the general style of the Dynamic Content app and the built in UI controls in the content editing form.
+
+This document provides some guidelines to help ensure a consistent experience for your users.
+
+This guide focuses on the styling used by your extension. To find out more about developing extensions, follow the links below.
 
 ### Useful links
 
@@ -20,7 +19,7 @@ is and how to start building your own.
 
 
 ### Contents
-An overview of what we'll cover in this guide
+Topics covered in this guide.
 - [Variables](./#category-variables)
   - [Colors](./#colors)
   - [Typography](./#typography)

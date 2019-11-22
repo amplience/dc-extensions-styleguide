@@ -2,16 +2,17 @@
 name: Inputs
 category: Components
 ---
-If you want to include some inputs in your custom extension you can follow our styling by having a solid border and visual cues in color
+If your extension includes input controls, then you can follow our styling by specifying a solid border and by using color to indicate:
 
-
+- an invalid value has been entered
+- the item is disabled and cannot be used to input data
+ 
 #### States:
 - `.ampx-input__container` Default: displays focus.
-- `.ampx-input__container .ampx-input__container--error` Error: denotes error with border and description text.
-- `.ampx-input__container .ampx-input__container--disabled` Disabled: can't input data and is slightly less visible.
+- `.ampx-input__container .ampx-input__container--error` Error: indicates an error by setting the border color and showing error text
+- `.ampx-input__container .ampx-input__container--disabled` Disabled: makes the item slightly less visible to indicate that it is disabled and cannot be used to input data
 
-
-A input requires a title but a description is optional. Can be used with `[type=text]` and `[type=number]`.
+An input item requires a title but the description is optional. It can be used with `[type=text]` and `[type=number]`.
 
 ```input-default.html
 <div class="ampx-input__container">
