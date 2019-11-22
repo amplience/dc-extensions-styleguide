@@ -7,26 +7,30 @@
     "lib": "lib"
   },
   "scripts": {
-    "prettier:dev": "onchange 'dist/styles/**/*.css' -- prettier --write {{changed}}",
-    "css:dev": "npx postcss styles/**/*.css --base styles --watch -c postcss.config.js --no-map --dir dist/styles",
-    "stylemark:dev": "stylemark -i 'docs' -o 'dist' -c 'stylemark.yml' -b 8080",
-    "start": "concurrently --kill-others \"npm run stylemark:dev\" \"npm run css:dev\" \"npm run prettier:dev\"",
-    "prettier": "npx prettier --write 'dist/styles/**/*.css'",
-    "css": "npx postcss styles/**/*.css --base styles -c postcss.config.js --no-map --dir dist/styles",
-    "stylemark": "stylemark -i 'docs' -o 'dist' -c 'stylemark.yml'",
-    "build": "npm run stylemark && npm run css && npm run prettier"
+    "start": "npx gulp",
+    "build": "npx gulp build",
+    "serve": "npm run build && npx http-server ./dist",
+    "deploy-docs": "npm run build && npx gulp docs"
   },
   "keywords": [],
-  "author": "",
+  "author": "jwarner@amplience.com",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^5.0.0",
+    "browser-sync": "^2.26.7",
+    "fancy-log": "^1.3.3",
+    "gulp": "^4.0.2",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-postcss": "^8.0.0",
+    "gulp-prettier": "^2.2.0",
+    "http-server": "^0.11.1",
+    "npm-run-all": "^4.1.5",
     "onchange": "^6.1.0",
     "perfectionist": "^2.4.0",
     "postcss": "^7.0.21",
     "postcss-cli": "^6.1.3",
     "postcss-custom-properties": "^9.0.2",
     "postcss-import": "^12.0.1",
+    "postcss-prettify": "^0.3.4",
     "prettier": "^1.18.2",
     "stylemark": "^3.1.3"
   }

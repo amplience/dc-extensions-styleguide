@@ -1,0 +1,39 @@
+@import 'core.css';
+
+.ampx-heading-extra-large {
+  font-size: var(--font-size-display-1);
+  font-weight: var(--font-weight-normal);
+}
+
+.ampx-heading {
+  font-size: var(--font-size-headline);
+  font-weight: var(--font-weight-normal);
+}
+
+.ampx-subheading-large {
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-medium);  
+}
+
+.ampx-subheading {
+  font-size: var(--font-size-subheading);
+  font-weight: var(--font-weight-normal);
+}
+
+.ampx-body, .ampx-link {
+  font-size: var(--font-size-normal);
+}
+
+.ampx-link:hover {
+  color: var(--color-primary-light);
+  cursor: pointer;
+}
+
+.ampx-label, .ampx-error {
+  font-size: 11px;
+  color: var(--color-rolling-stone);
+}
+
+.ampx-error {
+  color: var(--color-error-red);
+}
