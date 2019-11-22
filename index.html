@@ -1,0 +1,881 @@
+<!doctype html>
+<html lang="en-us" id="insta">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<link href="_stylemark/css/all.css" rel="stylesheet">
+		<link rel="icon" href="" type="image/x-icon">
+
+		<!-- @todo Replace with custom icomoon/fontello bundle -->
+		<script src="https://use.fontawesome.com/6dd56ad32d.js"></script>
+
+		<title>Extensions Style Guide</title>
+
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family&#x3D;Roboto:300,400,400i,500,700&amp;display&#x3D;swap">
+			<link rel="stylesheet" href="styles/theme.css">
+	</head>
+	<body class="overflow-x-off i-page theme-page">
+		<div class="i-page__content theme-content">
+
+			<div class="i-nav-select theme-mobile-nav">
+				<form class="form">
+					<select class="form-control form-control-lg theme-mobile-nav-select">
+						<option disabled selected>Go to…</option>
+							<optgroup label="Introduction">
+									<option value="getting-started">Getting started</option>
+							</optgroup>
+							<optgroup label="Components">
+									<option value="buttons">Buttons</option>
+									<option value="inputs">Inputs</option>
+							</optgroup>
+							<optgroup label="Variables">
+									<option value="colors">Colors</option>
+									<option value="typography">Typography</option>
+							</optgroup>
+					</select>
+				</form>
+			</div>
+
+				<div id="category-introduction" class="theme-content-category">
+						<div id="getting-started" class="i-library theme-content-element">
+	<h1 class="display-4 theme-content-element-title">Getting started</h1>
+	<span class="theme-content-element-source">
+		<span class="theme-content-element-source-label">Source:</span>
+		<span class="theme-content-element-source-path">introduction.md</span>
+	</span>
+	<div class="theme-content-element-description"><p>When you develop an extension for Dynamic Content, it&#39;s important to ensure that your extension matches the general style of the Dynamic Content app and the built in UI controls in the content editing form.</p>
+<p>This document provides some guidelines to help ensure a consistent experience for your users.</p>
+<p>This guide focuses on the styling used by your extension. To find out more about developing extensions, follow the links below.</p>
+<h3>Useful links</h3><ul>
+<li><a href="https://docs.amplience.net/development/extensions.html">How to use Extensions in Dynamic Content</a></li>
+<li><a href="https://amplience.github.io/dc-extensions-sdk/">SDK Documentation</a></li>
+<li><a href="https://github.com/amplience/dc-extensions-sdk">SDK Github</a></li>
+</ul>
+<h3>Contents</h3><p>Topics covered in this guide.</p>
+<ul>
+<li><p><a href="./#category-variables">Variables</a></p>
+<ul>
+<li><a href="./#colors">Colors</a></li>
+<li><a href="./#typography">Typography</a></li>
+</ul>
+</li>
+<li><p><a href="./#category-components">Components</a></p>
+<ul>
+<li><a href="./#buttons">Buttons</a></li>
+<li><a href="./#inputs">Inputs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+				</div>
+				<div id="category-components" class="theme-content-category">
+						<div id="buttons" class="i-library theme-content-element">
+	<h1 class="display-4 theme-content-element-title">Buttons</h1>
+	<span class="theme-content-element-source">
+		<span class="theme-content-element-source-label">Source:</span>
+		<span class="theme-content-element-source-path">components/buttons.md</span>
+	</span>
+	<div class="theme-content-element-description"><p>Buttons can be used with <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements.</p>
+<p>Types of buttons:</p>
+<ul>
+<li><code>.ampx-button</code> Default: can be used for links, toolbars or secondary buttons</li>
+<li><code>.ampx-button .ampx-button__primary</code> Primary: used for call to actions</li>
+<li><code>.ampx-button .ampx-button__disabled</code> Disabled: used to provide a visual cue to indicate an action is disabled<div class="i-example">
+                  <h5 class="i-example__heading">
+                      <a
+                          href="buttons-button.html"
+                          target="_blank"
+                          class="plain-link"
+                          data-toggle="tooltip"
+                          data-placement="top"
+                          title="Open in a new window"
+                      >
+                          <i class="fa fa-external-link-square fa-fw"></i>
+                          Example
+                      </a>
+                  </h5>
+                  <div class="i-example__body">
+                      <div
+                          class="i-example__iframe"
+                          lazyframe
+                          data-src="buttons-button.html"
+                          data-initinview="true"
+                          data-title="Loading..." 
+                      ></div>
+                  </div>
+              </div>
+
+</li>
+</ul>
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> html</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="&lt;button class=&quot;ampx-button&quot;&gt;Default&lt;/button&gt;
+&lt;button class=&quot;ampx-button ampx-button__primary&quot;&gt;Primary&lt;/button&gt;
+&lt;button class=&quot;ampx-button ampx-button__disabled&quot;&gt;Disabled&lt;/button&gt;">Copy</button>
+		<pre class="mb-0"><code class="lang-">&lt;button class=&quot;ampx-button&quot;&gt;Default&lt;/button&gt;
+&lt;button class=&quot;ampx-button ampx-button__primary&quot;&gt;Primary&lt;/button&gt;
+&lt;button class=&quot;ampx-button ampx-button__disabled&quot;&gt;Disabled&lt;/button&gt;</code></pre>
+	</div>
+</div>
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> css</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text=".ampx-button {
+  cursor: pointer;
+  border: 0;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0 10px;
+  margin: 0 8px;
+  background-color: transparent;
+  transition: 0.3s;
+  color: #333333;
+  height: 30px;
+  line-height: 30px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 3px;
+}
+
+.ampx-button:hover {
+  color: #1ab0f9;
+}
+
+.ampx-button__primary {
+  background-color: #039be5;
+  color: #fff;
+}
+
+.ampx-button__primary:hover {
+  background-color: #1ab0f9;
+  color: #fff;
+}
+
+.ampx-button__disabled:hover,
+.ampx-button__disabled {
+  background-color: #e5e5e5;
+  color: #bfbfbf;
+}">Copy</button>
+		<pre class="mb-0"><code class="lang-">.ampx-button {
+  cursor: pointer;
+  border: 0;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0 10px;
+  margin: 0 8px;
+  background-color: transparent;
+  transition: 0.3s;
+  color: #333333;
+  height: 30px;
+  line-height: 30px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 3px;
+}
+
+.ampx-button:hover {
+  color: #1ab0f9;
+}
+
+.ampx-button__primary {
+  background-color: #039be5;
+  color: #fff;
+}
+
+.ampx-button__primary:hover {
+  background-color: #1ab0f9;
+  color: #fff;
+}
+
+.ampx-button__disabled:hover,
+.ampx-button__disabled {
+  background-color: #e5e5e5;
+  color: #bfbfbf;
+}</code></pre>
+	</div>
+</div></div>
+</div>
+
+						<div id="inputs" class="i-library theme-content-element">
+	<h1 class="display-4 theme-content-element-title">Inputs</h1>
+	<span class="theme-content-element-source">
+		<span class="theme-content-element-source-label">Source:</span>
+		<span class="theme-content-element-source-path">components/inputs.md</span>
+	</span>
+	<div class="theme-content-element-description"><p>If your extension includes input controls, then you can follow our styling by specifying a solid border and by using color to indicate:</p>
+<ul>
+<li>an invalid value has been entered</li>
+<li>the item is disabled and cannot be used to input data</li>
+</ul>
+<h4>States:</h4><ul>
+<li><code>.ampx-input__container</code> Default: displays focus.</li>
+<li><code>.ampx-input__container .ampx-input__container--error</code> Error: indicates an error by setting the border color and showing error text</li>
+<li><code>.ampx-input__container .ampx-input__container--disabled</code> Disabled: makes the item slightly less visible to indicate that it is disabled and cannot be used to input data</li>
+</ul>
+<p>An input item requires a title but the description is optional. It can be used with <code>[type=text]</code> and <code>[type=number]</code>.</p>
+<div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="inputs-input-default.html"
+                            target="_blank"
+                            class="plain-link"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Open in a new window"
+                        >
+                            <i class="fa fa-external-link-square fa-fw"></i>
+                            Example
+                        </a>
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="inputs-input-default.html"
+                            data-initinview="true"
+                            data-title="Loading..." 
+                        ></div>
+                    </div>
+                </div>
+
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> html</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="&lt;div class=&quot;ampx-input__container&quot;&gt;
+  &lt;label class=&quot;ampx-input__label&quot;&gt;Default number input&lt;/label&gt;
+  &lt;input class=&quot;ampx-input&quot; type=&quot;number&quot;/&gt;
+  &lt;label class=&quot;ampx-input__description&quot;&gt;description&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;ampx-input__container ampx-input__container--disabled&quot;&gt;
+  &lt;label class=&quot;ampx-input__label&quot;&gt;Input disabled&lt;/label&gt;
+  &lt;input class=&quot;ampx-input&quot; type=&quot;text&quot;/&gt;
+  &lt;label class=&quot;ampx-input__description&quot;&gt;description&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;ampx-input__container ampx-input__container--error&quot;&gt;
+  &lt;label class=&quot;ampx-input__label&quot;&gt;Input with error&lt;/label&gt;
+  &lt;input class=&quot;ampx-input&quot; type=&quot;text&quot;/&gt;
+  &lt;label class=&quot;ampx-input__description&quot;&gt;description&lt;/label&gt;
+&lt;/div&gt;">Copy</button>
+		<pre class="mb-0"><code class="lang-">&lt;div class=&quot;ampx-input__container&quot;&gt;
+  &lt;label class=&quot;ampx-input__label&quot;&gt;Default number input&lt;/label&gt;
+  &lt;input class=&quot;ampx-input&quot; type=&quot;number&quot;/&gt;
+  &lt;label class=&quot;ampx-input__description&quot;&gt;description&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;ampx-input__container ampx-input__container--disabled&quot;&gt;
+  &lt;label class=&quot;ampx-input__label&quot;&gt;Input disabled&lt;/label&gt;
+  &lt;input class=&quot;ampx-input&quot; type=&quot;text&quot;/&gt;
+  &lt;label class=&quot;ampx-input__description&quot;&gt;description&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;ampx-input__container ampx-input__container--error&quot;&gt;
+  &lt;label class=&quot;ampx-input__label&quot;&gt;Input with error&lt;/label&gt;
+  &lt;input class=&quot;ampx-input&quot; type=&quot;text&quot;/&gt;
+  &lt;label class=&quot;ampx-input__description&quot;&gt;description&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+	</div>
+</div>
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> css</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text=".ampx-input__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.ampx-input {
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #808080;
+  height: 30px;
+  flex: 1;
+  display: block;
+  margin-top: 0;
+  padding: 2px 2px 1px 2px;
+  line-height: 26px;
+  font-size: 14px;
+  height: 30px;
+  background: none;
+  width: 100%;
+}
+
+.ampx-input__label,
+.ampx-input__description {
+  font-size: 11px;
+  color: #808080;
+}
+
+.ampx-input__description {
+  margin: 4px 0 0 0;
+}
+
+.ampx-input:focus {
+  outline: none;
+  border-bottom: 2px solid #039be5;
+}
+
+.ampx-input__container--error .ampx-input__description {
+  color: #ff3366;
+}
+
+.ampx-input:invalid {
+  border-color: #ff3366;
+  box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+.ampx-input__container--error .ampx-input {
+  border-color: #ff3366;
+}
+
+.ampx-input__container--disabled {
+  opacity: 0.8;
+  pointer-events: none;
+}">Copy</button>
+		<pre class="mb-0"><code class="lang-">.ampx-input__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.ampx-input {
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #808080;
+  height: 30px;
+  flex: 1;
+  display: block;
+  margin-top: 0;
+  padding: 2px 2px 1px 2px;
+  line-height: 26px;
+  font-size: 14px;
+  height: 30px;
+  background: none;
+  width: 100%;
+}
+
+.ampx-input__label,
+.ampx-input__description {
+  font-size: 11px;
+  color: #808080;
+}
+
+.ampx-input__description {
+  margin: 4px 0 0 0;
+}
+
+.ampx-input:focus {
+  outline: none;
+  border-bottom: 2px solid #039be5;
+}
+
+.ampx-input__container--error .ampx-input__description {
+  color: #ff3366;
+}
+
+.ampx-input:invalid {
+  border-color: #ff3366;
+  box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+.ampx-input__container--error .ampx-input {
+  border-color: #ff3366;
+}
+
+.ampx-input__container--disabled {
+  opacity: 0.8;
+  pointer-events: none;
+}</code></pre>
+	</div>
+</div></div>
+</div>
+
+				</div>
+				<div id="category-variables" class="theme-content-category">
+						<div id="colors" class="i-library theme-content-element">
+	<h1 class="display-4 theme-content-element-title">Colors</h1>
+	<span class="theme-content-element-source">
+		<span class="theme-content-element-source-label">Source:</span>
+		<span class="theme-content-element-source-path">varibles/colours.md</span>
+	</span>
+	<div class="theme-content-element-description"><p>Dynamic Content follows a blue color scheme <code>#039be5</code> with bright green &amp; pink for validation colors.
+Text, backgrounds and figures within the app use a range of black and greys. Colors used within the app are shown below. We have included some CSS variables for you to use in your own projects.</p>
+<ul>
+<li><code>--color-primary</code>: primarily be used for call to actions, and grabbing attention for an action.</li>
+<li><code>--color-primary-light</code>: normally used to accent the primary color in cases such as hover actions.</li>
+<li><code>--color-valid-green</code>: used to denote that an action has been successful or an item is valid.</li>
+<li><code>--color-error-red</code>: used mostly to indicate that items are invalid or that an action has failed</li>
+</ul>
+<h3>Usage is as follows:</h3>
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang "> </button>
+	<div class="i-code-block__content ">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text=":root {
+  --color-primary: #039be5;
+}
+
+.example-class {
+  background-color: var(--color-primary);
+}
+">Copy</button>
+		<pre class="mb-0"><code class="lang-">:root {
+  --color-primary: #039be5;
+}
+
+.example-class {
+  background-color: var(--color-primary);
+}
+</code></pre>
+	</div>
+</div><div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="colors-colors.html"
+                            target="_blank"
+                            class="plain-link"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Open in a new window"
+                        >
+                            <i class="fa fa-external-link-square fa-fw"></i>
+                            Example
+                        </a>
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="colors-colors.html"
+                            data-initinview="true"
+                            data-title="Loading..." 
+                        ></div>
+                    </div>
+                </div>
+
+
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> css</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text=":root {
+  --color-primary: #039be5;
+  --font-family: &#39;Roboto&#39;, sans-serif;
+  --color-primary-light: #1ab0f9;
+  --color-rolling-stone: #808080;
+  --color-grey-disabled: #e5e5e5;
+  --color-grey-background: #f5f5f5;
+  --color-black-background: rgba(33,33,33,0.6);
+  --color-grey-text-disabled: #bfbfbf;
+  --color-valid-green: #7ed900;
+  --color-error-red: #ff3366;
+  --color-default-text: #333333;
+  --color-black: #17202c;
+  --color-white: #fff;
+}">Copy</button>
+		<pre class="mb-0"><code class="lang-">:root {
+  --color-primary: #039be5;
+  --font-family: &#39;Roboto&#39;, sans-serif;
+  --color-primary-light: #1ab0f9;
+  --color-rolling-stone: #808080;
+  --color-grey-disabled: #e5e5e5;
+  --color-grey-background: #f5f5f5;
+  --color-black-background: rgba(33,33,33,0.6);
+  --color-grey-text-disabled: #bfbfbf;
+  --color-valid-green: #7ed900;
+  --color-error-red: #ff3366;
+  --color-default-text: #333333;
+  --color-black: #17202c;
+  --color-white: #fff;
+}</code></pre>
+	</div>
+</div></div>
+</div>
+
+						<div id="typography" class="i-library theme-content-element">
+	<h1 class="display-4 theme-content-element-title">Typography</h1>
+	<span class="theme-content-element-source">
+		<span class="theme-content-element-source-label">Source:</span>
+		<span class="theme-content-element-source-path">varibles/typography.md</span>
+	</span>
+	<div class="theme-content-element-description"><p>Dynamic Content uses Roboto and you can include it in your project as follows:</p>
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang "> typography</button>
+	<div class="i-code-block__content ">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&amp;amp;display=swap&quot;&gt;">Copy</button>
+		<pre class="mb-0"><code class="lang-">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&amp;amp;display=swap&quot;&gt;</code></pre>
+	</div>
+</div><p>The text color for standard text should be <code>--color-default-black</code> / <code>#333333</code>.</p>
+<h4>Usage in the content editing form:</h4><ul>
+<li><code>.ampx-heading</code>: the main header in an extension. </li>
+<li><code>.ampx-subheading-large</code>: the main heading in a sub list or section </li>
+<li><code>.ampx-subheading</code>: a heading in a sub list in a section </li>
+<li><code>.ampx-body</code>: used for copy. </li>
+<li><code>.ampx-link</code>: used for external links. </li>
+<li><code>.ampx-label</code>: used for adding contextual information to an entity. </li>
+<li><code>.ampx-error</code>: used for adding contextual information to an entity in an error state. </li>
+</ul>
+<div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="typography-typography.html"
+                            target="_blank"
+                            class="plain-link"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Open in a new window"
+                        >
+                            <i class="fa fa-external-link-square fa-fw"></i>
+                            Example
+                        </a>
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="typography-typography.html"
+                            data-initinview="true"
+                            data-title="Loading..." 
+                        ></div>
+                    </div>
+                </div>
+
+
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> css</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text=".ampx-heading-extra-large {
+  font-size: 56px;
+  font-weight: 400;
+}
+
+.ampx-heading {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.ampx-subheading-large {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.ampx-subheading {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.ampx-body,
+.ampx-link {
+  font-size: 13px;
+}
+
+.ampx-link:hover {
+  color: #1ab0f9;
+  cursor: pointer;
+}
+
+.ampx-label,
+.ampx-error {
+  font-size: 11px;
+  color: #808080;
+}
+
+.ampx-error {
+  color: #ff3366;
+}">Copy</button>
+		<pre class="mb-0"><code class="lang-">.ampx-heading-extra-large {
+  font-size: 56px;
+  font-weight: 400;
+}
+
+.ampx-heading {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.ampx-subheading-large {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.ampx-subheading {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.ampx-body,
+.ampx-link {
+  font-size: 13px;
+}
+
+.ampx-link:hover {
+  color: #1ab0f9;
+  cursor: pointer;
+}
+
+.ampx-label,
+.ampx-error {
+  font-size: 11px;
+  color: #808080;
+}
+
+.ampx-error {
+  color: #ff3366;
+}</code></pre>
+	</div>
+</div><h4>Usage examples:</h4><div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="typography-typography-examples.html"
+                            target="_blank"
+                            class="plain-link"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Open in a new window"
+                        >
+                            <i class="fa fa-external-link-square fa-fw"></i>
+                            Example
+                        </a>
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="typography-typography-examples.html"
+                            data-initinview="true"
+                            data-title="Loading..." 
+                        ></div>
+                    </div>
+                </div>
+
+
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> css</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text=".ampx-heading-extra-large {
+  font-size: 56px;
+  font-weight: 400;
+}
+
+.ampx-heading {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.ampx-subheading-large {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.ampx-subheading {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.ampx-body,
+.ampx-link {
+  font-size: 13px;
+}
+
+.ampx-link:hover {
+  color: #1ab0f9;
+  cursor: pointer;
+}
+
+.ampx-label,
+.ampx-error {
+  font-size: 11px;
+  color: #808080;
+}
+
+.ampx-error {
+  color: #ff3366;
+}">Copy</button>
+		<pre class="mb-0"><code class="lang-">.ampx-heading-extra-large {
+  font-size: 56px;
+  font-weight: 400;
+}
+
+.ampx-heading {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.ampx-subheading-large {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.ampx-subheading {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.ampx-body,
+.ampx-link {
+  font-size: 13px;
+}
+
+.ampx-link:hover {
+  color: #1ab0f9;
+  cursor: pointer;
+}
+
+.ampx-label,
+.ampx-error {
+  font-size: 11px;
+  color: #808080;
+}
+
+.ampx-error {
+  color: #ff3366;
+}</code></pre>
+	</div>
+</div></div>
+</div>
+
+				</div>
+		</div>
+		<div
+			class="i-page__sidebar theme-sidebar"
+			style="background: #161f29;color: #fff;"
+		>
+			<h1 class="i-sidebar-title h4 mt-4 theme-sidebar-header">
+					<img class="i-sidebar-logo mr-2 theme-sidebar-header-logo" src="assets/header.png" height="40" alt="">
+				<span class="theme-sidebar-header-title">Extensions Style Guide</span>
+			</h1>
+			
+			<div class="relative mt-3 mb-2 px-0 theme-sidebar-search">
+				<div class="i-search-input">
+					<input id="search-filter" name="filter" type="search" placeholder="Search" class="form-control i-sidebar-item-filter">
+					<label for="search-filter" class="search-input-icon icon-search"></label>
+					<button type="button" class="i-search-input-reset" aria-label="Clear">
+						<i class="icon-cross"></i>
+					</button>
+				</div>
+			</div>
+			
+			<div class="theme-sidebar-categories">
+					<div class="i-sidebar-list-group theme-sidebar-category">
+			
+						<h5
+							class="pt-4 mb-1 theme-sidebar-category-title"
+							data-filter-value=" Getting started "
+						>
+							<a href="#category-introduction" class="i-sidebar-list-item">
+								<b>Introduction</b>
+							</a>
+						</h5>
+			
+						<div>
+								<a
+									href="#getting-started"
+									class="i-sidebar-list-item theme-sidebar-element"
+									data-filter-value="Getting started"
+								>
+									<span>Getting started</span>
+								</a>
+						</div>
+			
+					</div>
+					<div class="i-sidebar-list-group theme-sidebar-category">
+			
+						<h5
+							class="pt-4 mb-1 theme-sidebar-category-title"
+							data-filter-value=" Buttons  Inputs "
+						>
+							<a href="#category-components" class="i-sidebar-list-item">
+								<b>Components</b>
+							</a>
+						</h5>
+			
+						<div>
+								<a
+									href="#buttons"
+									class="i-sidebar-list-item theme-sidebar-element"
+									data-filter-value="Buttons"
+								>
+									<span>Buttons</span>
+								</a>
+								<a
+									href="#inputs"
+									class="i-sidebar-list-item theme-sidebar-element"
+									data-filter-value="Inputs"
+								>
+									<span>Inputs</span>
+								</a>
+						</div>
+			
+					</div>
+					<div class="i-sidebar-list-group theme-sidebar-category">
+			
+						<h5
+							class="pt-4 mb-1 theme-sidebar-category-title"
+							data-filter-value=" Colors  Typography "
+						>
+							<a href="#category-variables" class="i-sidebar-list-item">
+								<b>Variables</b>
+							</a>
+						</h5>
+			
+						<div>
+								<a
+									href="#colors"
+									class="i-sidebar-list-item theme-sidebar-element"
+									data-filter-value="Colors"
+								>
+									<span>Colors</span>
+								</a>
+								<a
+									href="#typography"
+									class="i-sidebar-list-item theme-sidebar-element"
+									data-filter-value="Typography"
+								>
+									<span>Typography</span>
+								</a>
+						</div>
+			
+					</div>
+			</div>
+			
+			<div class="i-sidebar-filter-no-results i-muted i-pad-horiz-2 theme-sidebar-search-no-results">
+				No matches.
+			</div>
+			
+			<div class="row no-gutters mt-auto py-4 theme-sidebar-footer">
+				<span class="col">
+					Generated by <a href="https://github.com/nextbigsoundinc/stylemark">Stylemark</a>
+				</span>
+			</div>
+		</div>
+
+		<script src="_stylemark/js/vendor/jquery-3.2.1.slim.min.js"></script>
+		<script src="_stylemark/js/vendor/popper.min.js"></script>
+		<script src="_stylemark/js/vendor/tether.min.js"></script>
+		<script src="_stylemark/js/vendor/bootstrap.min.js"></script>
+		<script src="_stylemark/js/vendor/iframeResizer.min.js"></script>
+		<script src="_stylemark/js/vendor/lazyframe.min.js"></script>
+		<script src="_stylemark/js/vendor/highlight.min.js"></script>
+		<script src="_stylemark/js/vendor/clipboard.min.js"></script>
+		<script src="_stylemark/js/vendor/in-view.min.js"></script>
+		<script src="_stylemark/js/app.js"></script>
+
+	</body>
+</html>

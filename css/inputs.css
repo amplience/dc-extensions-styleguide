@@ -1,6 +1,3 @@
-@import 'core.css';
-
-
 .ampx-input__container {
   display: flex;
   flex-wrap: wrap;
@@ -11,7 +8,7 @@
 .ampx-input {
   outline: none;
   border: 0;
-  border-bottom: var(--border);
+  border-bottom: 1px solid #808080;
   height: 30px;
   flex: 1;
   display: block;
@@ -24,9 +21,10 @@
   width: 100%;
 }
 
-.ampx-input__label, .ampx-input__description {
+.ampx-input__label,
+.ampx-input__description {
   font-size: 11px;
-  color: var(--color-rolling-stone);
+  color: #808080;
 }
 
 .ampx-input__description {
@@ -35,21 +33,21 @@
 
 .ampx-input:focus {
   outline: none;
-  border-bottom: 2px solid var(--color-primary);
+  border-bottom: 2px solid #039be5;
 }
 
 .ampx-input__container--error .ampx-input__description {
-  color: var(--color-error-red);
+  color: #ff3366;
 }
 
 .ampx-input:invalid {
-  border-color: var(--color-error-red);
+  border-color: #ff3366;
   box-shadow: none;
   -moz-box-shadow: none;
 }
 
 .ampx-input__container--error .ampx-input {
-  border-color: var(--color-error-red);
+  border-color: #ff3366;
 }
 
 .ampx-input__container--disabled {

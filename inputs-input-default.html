@@ -1,0 +1,343 @@
+<!doctype html>
+<html>
+
+	<head>
+		<style>
+					.ampx-input__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.ampx-input {
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #808080;
+  height: 30px;
+  flex: 1;
+  display: block;
+  margin-top: 0;
+  padding: 2px 2px 1px 2px;
+  line-height: 26px;
+  font-size: 14px;
+  height: 30px;
+  background: none;
+  width: 100%;
+}
+
+.ampx-input__label,
+.ampx-input__description {
+  font-size: 11px;
+  color: #808080;
+}
+
+.ampx-input__description {
+  margin: 4px 0 0 0;
+}
+
+.ampx-input:focus {
+  outline: none;
+  border-bottom: 2px solid #039be5;
+}
+
+.ampx-input__container--error .ampx-input__description {
+  color: #ff3366;
+}
+
+.ampx-input:invalid {
+  border-color: #ff3366;
+  box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+.ampx-input__container--error .ampx-input {
+  border-color: #ff3366;
+}
+
+.ampx-input__container--disabled {
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+		</style>
+
+		<style>
+			html, body {
+				min-height: 0 !important;
+				height: auto !important;
+			}
+		</style>
+
+		<script>
+			function findAndHandleStylemarkBlocks(languages, handler) {
+				var blocks = getStylemarkBlocks(languages);
+				handleStylemarkBlocks(blocks, handler);
+			}
+
+			function getStylemarkBlocks(languages) {
+				languages = typeof languages === 'string' ? [languages] : languages;
+
+				var selectors = [];
+
+				for (var i = 0; i < languages.length; i++) {
+					selectors.push('script[data-language="' + languages[i] + '"]');
+				}
+
+				var selector = selectors.join(',');
+				var scripts = document.querySelectorAll(selector);
+				var blocks = [];
+
+				for (var i = 0, length = scripts.length; i < length; i++) {
+					if (scripts[i].innerText) {
+						blocks.push(scripts[i].innerText);
+					}
+				}
+
+				return blocks;
+			}
+
+			function handleStylemarkBlocks(blocks, handler) {
+				for (var i = 0, length = blocks.length; i < length; i++) {
+					handler(blocks[i], i);
+				}
+			}
+		</script>
+
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family&#x3D;Roboto:300,400,400i,500,700&amp;display&#x3D;swap">
+			<link rel="stylesheet" href="styles/base.css">
+
+		
+	</head>
+
+	<body>					<div class="ampx-input__container">
+  <label class="ampx-input__label">Default number input</label>
+  <input class="ampx-input" type="number"/>
+  <label class="ampx-input__description">description</label>
+</div>
+
+<div class="ampx-input__container ampx-input__container--disabled">
+  <label class="ampx-input__label">Input disabled</label>
+  <input class="ampx-input" type="text"/>
+  <label class="ampx-input__description">description</label>
+</div>
+
+<div class="ampx-input__container ampx-input__container--error">
+  <label class="ampx-input__label">Input with error</label>
+  <input class="ampx-input" type="text"/>
+  <label class="ampx-input__description">description</label>
+</div>
+			<script type="text/x-stylemark" data-language="html"><div class="ampx-input__container">
+  <label class="ampx-input__label">Default number input</label>
+  <input class="ampx-input" type="number"/>
+  <label class="ampx-input__description">description</label>
+</div>
+
+<div class="ampx-input__container ampx-input__container--disabled">
+  <label class="ampx-input__label">Input disabled</label>
+  <input class="ampx-input" type="text"/>
+  <label class="ampx-input__description">description</label>
+</div>
+
+<div class="ampx-input__container ampx-input__container--error">
+  <label class="ampx-input__label">Input with error</label>
+  <input class="ampx-input" type="text"/>
+  <label class="ampx-input__description">description</label>
+</div></script>
+			<script type="text/x-stylemark" data-language="css">.ampx-input__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.ampx-input {
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #808080;
+  height: 30px;
+  flex: 1;
+  display: block;
+  margin-top: 0;
+  padding: 2px 2px 1px 2px;
+  line-height: 26px;
+  font-size: 14px;
+  height: 30px;
+  background: none;
+  width: 100%;
+}
+
+.ampx-input__label,
+.ampx-input__description {
+  font-size: 11px;
+  color: #808080;
+}
+
+.ampx-input__description {
+  margin: 4px 0 0 0;
+}
+
+.ampx-input:focus {
+  outline: none;
+  border-bottom: 2px solid #039be5;
+}
+
+.ampx-input__container--error .ampx-input__description {
+  color: #ff3366;
+}
+
+.ampx-input:invalid {
+  border-color: #ff3366;
+  box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+.ampx-input__container--error .ampx-input {
+  border-color: #ff3366;
+}
+
+.ampx-input__container--disabled {
+  opacity: 0.8;
+  pointer-events: none;
+}
+</script>
+
+		<!--
+			Vanilla JS
+		-->
+
+		<script>
+			findAndHandleStylemarkBlocks('js', function(block) {
+				eval(block);
+			});
+		</script>
+
+		<!--
+			AngularJS
+		-->
+
+		<script>
+			(function(angular) {
+
+				if (!angular) {
+					return;
+				}
+
+				findAndHandleStylemarkBlocks('angularjs', function(block, index) {
+					var moduleElem = document.querySelector('[ng-app]');
+					var module;
+
+					if (moduleElem) {
+						// Uses an existing module
+						module = angular.module(moduleElem.getAttribute('ng-app'));
+					}
+					else {
+						// Creates a new module
+						module = angular.module('stylemark-inputs-input-default', []);
+					}
+
+					module.controller('stylemark-inputs-input-default-' + index, function($scope) {
+						$scope.$eval(block);
+					});
+				});
+			})(window.angular);
+		</script>
+
+		<!--
+			React / JSX
+		-->
+
+		<script>
+			(function(ReactDOM) {
+
+				if (!ReactDOM) {
+					return;
+				}
+
+				findAndHandleStylemarkBlocks('jsx', function(block, index) {
+					var rootNode = document.querySelectorAll('.stylemark-react-root')[index];
+					var Component = eval(block);
+					ReactDOM.render(Component, rootNode);
+				});
+			})(window.ReactDOM);
+		</script>
+
+		<!--
+			Ember
+		-->
+
+		<script>
+			(function(Ember) {
+
+				if (!Ember) {
+					return;
+				}
+
+				findAndHandleStylemarkBlocks(['handlebars', 'hbs'], function(block, index) {
+					var render = function() {
+						var app = window.noop
+						var container = app.__container__;
+						var renderer = container.lookup('renderer:-dom');
+						var template = Ember.HTMLBars.compile(block);
+
+						var jsBlocks = getStylemarkBlocks('js');
+						var jsBlock = jsBlocks && jsBlocks[0] ? jsBlocks[0] : '{}';
+						var context;
+						eval('context = ' + jsBlock);
+
+						// Credit:
+						// http://stackoverflow.com/questions/27950413/render-ember-js-hbs-template-to-a-string#answer-35625858
+						var compile = function(container, template, context) {
+							return new Ember.RSVP.Promise(function(resolve) {
+								Ember.Component.extend(Ember.merge({
+									style: 'display:none;',
+									layout: template,
+									container: container,
+									renderer: renderer,
+
+									init: function() {
+										this._super.apply(this, arguments);
+										Ember.setOwner(this, container);
+									},
+
+									didRender: function() {
+										var elem = this.$();
+										resolve(elem);
+										this.destroy();
+									}
+								}, context))
+									.create()
+									.append();
+
+							});
+						};
+
+						compile(container, template, context).then(function(elem) {
+							var node = document.querySelectorAll('.stylemark-ember-root')[index];
+							jQuery(node).append(elem);
+						});
+					};
+
+					var isReady = function() {
+						return window.noop
+							&& window.noop.__container__;
+					};
+
+					var checkReady = function() {
+						if (isReady()) {
+							render();
+						}
+						else {
+							setTimeout(checkReady, 20);
+						}
+					};
+
+					checkReady();
+				});
+
+			})(window.Ember);
+		</script>
+
+		<script src="_stylemark/js/vendor/iframeResizer.contentWindow.min.js"></script>
+	</body>
+</html>

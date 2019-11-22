@@ -1,0 +1,353 @@
+<!doctype html>
+<html>
+
+	<head>
+		<style>
+					:root {
+  --color-primary: #039be5;
+  --font-family: 'Roboto', sans-serif;
+  --color-primary-light: #1ab0f9;
+  --color-rolling-stone: #808080;
+  --color-grey-disabled: #e5e5e5;
+  --color-grey-background: #f5f5f5;
+  --color-black-background: rgba(33,33,33,0.6);
+  --color-grey-text-disabled: #bfbfbf;
+  --color-valid-green: #7ed900;
+  --color-error-red: #ff3366;
+  --color-default-text: #333333;
+  --color-black: #17202c;
+  --color-white: #fff;
+}
+					.colors {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.color-default-text, .color-black h4 {
+  color: white;
+}
+
+.colors div {
+  margin: 10px;
+  min-width: 18%;
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.colors h4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.colors div:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+@media (max-width: 1000px) {
+  .colors div {
+    min-width: 15%;   
+    font-size: 14px;
+  }
+}
+@media (max-width: 800px) {
+  .colors div {
+    min-width: 15%;   
+  }
+}
+
+@media (max-width: 700px) {
+  .colors div {
+    width: 35%;   
+    min-width: 35%;
+    font-size: 12px;
+  }
+}
+		</style>
+
+		<style>
+			html, body {
+				min-height: 0 !important;
+				height: auto !important;
+			}
+		</style>
+
+		<script>
+			function findAndHandleStylemarkBlocks(languages, handler) {
+				var blocks = getStylemarkBlocks(languages);
+				handleStylemarkBlocks(blocks, handler);
+			}
+
+			function getStylemarkBlocks(languages) {
+				languages = typeof languages === 'string' ? [languages] : languages;
+
+				var selectors = [];
+
+				for (var i = 0; i < languages.length; i++) {
+					selectors.push('script[data-language="' + languages[i] + '"]');
+				}
+
+				var selector = selectors.join(',');
+				var scripts = document.querySelectorAll(selector);
+				var blocks = [];
+
+				for (var i = 0, length = scripts.length; i < length; i++) {
+					if (scripts[i].innerText) {
+						blocks.push(scripts[i].innerText);
+					}
+				}
+
+				return blocks;
+			}
+
+			function handleStylemarkBlocks(blocks, handler) {
+				for (var i = 0, length = blocks.length; i < length; i++) {
+					handler(blocks[i], i);
+				}
+			}
+		</script>
+
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family&#x3D;Roboto:300,400,400i,500,700&amp;display&#x3D;swap">
+			<link rel="stylesheet" href="styles/base.css">
+
+		
+	</head>
+
+	<body>					<div class="colors">
+</div>
+			<script type="text/x-stylemark" data-language="html"><div class="colors">
+</div></script>
+			<script type="text/x-stylemark" data-language="css">:root {
+  --color-primary: #039be5;
+  --font-family: 'Roboto', sans-serif;
+  --color-primary-light: #1ab0f9;
+  --color-rolling-stone: #808080;
+  --color-grey-disabled: #e5e5e5;
+  --color-grey-background: #f5f5f5;
+  --color-black-background: rgba(33,33,33,0.6);
+  --color-grey-text-disabled: #bfbfbf;
+  --color-valid-green: #7ed900;
+  --color-error-red: #ff3366;
+  --color-default-text: #333333;
+  --color-black: #17202c;
+  --color-white: #fff;
+}</script>
+			<script type="text/x-stylemark" data-language="js">  const container = document.querySelector('.colors');
+  const colors = [
+    'color-primary',
+    'color-primary-light',
+    'color-valid-green',
+    'color-error-red',
+    'color-rolling-stone',
+    'color-grey-disabled',
+    'color-grey-text-disabled',
+    'color-default-text',
+    'color-black'
+  ]
+
+  container.innerHTML = colors.reduce((acc, color) => {
+    const hex = getComputedStyle(container).getPropertyValue(`--${color}`) || '';
+    const html = `
+      <div class="${color}" style="background-color: var(--${color})">
+        <h4>${color} <br> ${hex}</h4>
+      </div>
+    `
+    return `${acc} ${html}`
+  }, ``)</script>
+			<script type="text/x-stylemark" data-language="css">.colors {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.color-default-text, .color-black h4 {
+  color: white;
+}
+
+.colors div {
+  margin: 10px;
+  min-width: 18%;
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.colors h4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.colors div:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+@media (max-width: 1000px) {
+  .colors div {
+    min-width: 15%;   
+    font-size: 14px;
+  }
+}
+@media (max-width: 800px) {
+  .colors div {
+    min-width: 15%;   
+  }
+}
+
+@media (max-width: 700px) {
+  .colors div {
+    width: 35%;   
+    min-width: 35%;
+    font-size: 12px;
+  }
+}</script>
+
+		<!--
+			Vanilla JS
+		-->
+
+		<script>
+			findAndHandleStylemarkBlocks('js', function(block) {
+				eval(block);
+			});
+		</script>
+
+		<!--
+			AngularJS
+		-->
+
+		<script>
+			(function(angular) {
+
+				if (!angular) {
+					return;
+				}
+
+				findAndHandleStylemarkBlocks('angularjs', function(block, index) {
+					var moduleElem = document.querySelector('[ng-app]');
+					var module;
+
+					if (moduleElem) {
+						// Uses an existing module
+						module = angular.module(moduleElem.getAttribute('ng-app'));
+					}
+					else {
+						// Creates a new module
+						module = angular.module('stylemark-colors-colors', []);
+					}
+
+					module.controller('stylemark-colors-colors-' + index, function($scope) {
+						$scope.$eval(block);
+					});
+				});
+			})(window.angular);
+		</script>
+
+		<!--
+			React / JSX
+		-->
+
+		<script>
+			(function(ReactDOM) {
+
+				if (!ReactDOM) {
+					return;
+				}
+
+				findAndHandleStylemarkBlocks('jsx', function(block, index) {
+					var rootNode = document.querySelectorAll('.stylemark-react-root')[index];
+					var Component = eval(block);
+					ReactDOM.render(Component, rootNode);
+				});
+			})(window.ReactDOM);
+		</script>
+
+		<!--
+			Ember
+		-->
+
+		<script>
+			(function(Ember) {
+
+				if (!Ember) {
+					return;
+				}
+
+				findAndHandleStylemarkBlocks(['handlebars', 'hbs'], function(block, index) {
+					var render = function() {
+						var app = window.noop
+						var container = app.__container__;
+						var renderer = container.lookup('renderer:-dom');
+						var template = Ember.HTMLBars.compile(block);
+
+						var jsBlocks = getStylemarkBlocks('js');
+						var jsBlock = jsBlocks && jsBlocks[0] ? jsBlocks[0] : '{}';
+						var context;
+						eval('context = ' + jsBlock);
+
+						// Credit:
+						// http://stackoverflow.com/questions/27950413/render-ember-js-hbs-template-to-a-string#answer-35625858
+						var compile = function(container, template, context) {
+							return new Ember.RSVP.Promise(function(resolve) {
+								Ember.Component.extend(Ember.merge({
+									style: 'display:none;',
+									layout: template,
+									container: container,
+									renderer: renderer,
+
+									init: function() {
+										this._super.apply(this, arguments);
+										Ember.setOwner(this, container);
+									},
+
+									didRender: function() {
+										var elem = this.$();
+										resolve(elem);
+										this.destroy();
+									}
+								}, context))
+									.create()
+									.append();
+
+							});
+						};
+
+						compile(container, template, context).then(function(elem) {
+							var node = document.querySelectorAll('.stylemark-ember-root')[index];
+							jQuery(node).append(elem);
+						});
+					};
+
+					var isReady = function() {
+						return window.noop
+							&& window.noop.__container__;
+					};
+
+					var checkReady = function() {
+						if (isReady()) {
+							render();
+						}
+						else {
+							setTimeout(checkReady, 20);
+						}
+					};
+
+					checkReady();
+				});
+
+			})(window.Ember);
+		</script>
+
+		<script src="_stylemark/js/vendor/iframeResizer.contentWindow.min.js"></script>
+	</body>
+</html>
