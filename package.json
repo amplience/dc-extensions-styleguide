@@ -10,7 +10,7 @@
     "start": "npx gulp",
     "build": "npx gulp build",
     "serve": "npm run build && npx http-server ./dist",
-    "deploy-docs": "npm run build && npx gulp docs"
+    "deploy-docs": "npm run build && touch ./dist/.nojekyll && npx gulp docs"
   },
   "keywords": [],
   "author": "jwarner@amplience.com",
