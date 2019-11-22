@@ -1,5 +1,5 @@
 ---
-name: Dynamic Content Extensions Style Guide
+name: Getting started
 category: Introduction
 ---
 
