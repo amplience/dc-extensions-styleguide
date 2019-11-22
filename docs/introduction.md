@@ -3,8 +3,6 @@ name: Getting started
 category: Introduction
 ---
 
-![GitHub followers](https://img.shields.io/github/followers/amplience?style=social)
-
 When you develop an extension for Dynamic Content, it's important to ensure that your extension matches the general style of the Dynamic Content app and the built in UI controls in the content editing form.
 
 This document provides some guidelines to help ensure a consistent experience for your users.
